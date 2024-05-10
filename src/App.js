@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
+import RepositoriesList from './RepositoriesList';
+import Repository from './Repository';
+import ErrorBoundary from './ErrorBoundary';
 import './App.css';
 
-function App() {
+const NotFound = () => {
+  let location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h3>No match for <code>{location.pathname}</code></h3>
     </div>
   );
-}
+};
+
+const App = () => {
+  return (
+    <Router>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="https://github.com/Demedia27">GitHub</Link></li>
+          </ul>
+        </nav>
+      <main className="container">
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<RepositoriesList />} />
+            <Route path="/:repoName" element={<Repository />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </ErrorBoundary>
+      </main>
+      <footer>
+        <p>&copy; 2024 <Link to="">Cyber Premium. </Link>All Rights Reserved.</p>
+      </footer>
+    </Router>
+  );
+};
 
 export default App;
+
