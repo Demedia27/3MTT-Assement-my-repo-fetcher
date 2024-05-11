@@ -58,6 +58,7 @@ const RepositoriesList = () => {
 
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
+    alert("404, Page not found. Check later.")
   };
 
   const prevPage = () => {
@@ -67,7 +68,7 @@ const RepositoriesList = () => {
   };
 
   return (
-    <div>
+    <div className='repo'>
       {repos.map(repo => (
         <div key={repo.id}>
           {/* Link to the individual repository */}

@@ -16,10 +16,10 @@ const Repository = () => {
     fetchRepo();
   }, [repoName]);
 
-  if (!repo) return <div>Loading...</div>;
+  if (!repo) return <div className='load'>Loading...</div>;
 
   return (
-    <div>
+    <div className='repoList'>
       <h2>{repo.name}</h2>
       <p>{repo.description}</p>
       <p>Language: {repo.language}</p>

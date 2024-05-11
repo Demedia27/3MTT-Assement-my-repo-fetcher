@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+  background-color: #043252;
 }
 
 .container {
@@ -20,6 +20,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #c6d3e2;
+  background-color: #0056b3;
   color: #f8f8f8;
   
 }
@@ -40,6 +41,11 @@ nav ul li {
   list-style: none;
   text-decoration: none;
   font-size: 20px;
+  padding: 10px;
+  color: white;
+}
+nav ul li:hover{
+  background-color: #110202;
 }
 
 nav ul li Link {
@@ -49,61 +55,57 @@ nav ul li Link {
   text-decoration: none;
 }
 
-Link{
+a{
   color: #f8f8f8;
+  text-decoration: none;
+
 }
 button{
   padding: 15px;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 15px;
+  font-size: 18px;
   color: #f8f8f8;
   background-color: #004292;
   margin: 10px;
+  margin-top: 30px;
 }
 button:hover {
-  background-color: #0056b3;
-  color: goldenrod;
-}
-hero {
-  background-color: #007bff;
-  color: #fff;
-  padding: 50px;
-  text-align: center;
-  margin-bottom: 20px;
+  background-color: rgb(1, 8, 20);
+  color: rgb(233, 173, 186);
+ 
 }
 
-hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0056b3;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #004292;
-}
-
-.repo-list {
-  background-color: #fff;
+.repo {
+  width: 50%;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  
+}
+.load{
+  color: white;
+}
+.repoList{
+  color: white;
+}
+h2{
+  margin: auto;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
 }
 
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #031846;
   margin-top: 20px;
   color: white;
-  margin-top: 15%;
+  margin-top: 10%;
 }

@@ -22,9 +22,11 @@ const App = () => {
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="https://github.com/Demedia27">GitHub</Link></li>
+            <li><Link to='https://github.com/Demedia27'>GitHub Acount</Link></li>
+            <li>Udeme Inwang: Portfolio</li>
           </ul>
         </nav>
+        <h2>List of my Repositories</h2>
       <main className="container">
         <ErrorBoundary>
           <Routes>
@@ -35,7 +37,7 @@ const App = () => {
         </ErrorBoundary>
       </main>
       <footer>
-        <p>&copy; 2024 <Link to="">Cyber Premium. </Link>All Rights Reserved.</p>
+        <p>&copy; 2024 <a href="https://www.linkedin.com/in/udeme-udo-b0841b165/">DemsyCoda. </a>All Rights Reserved.</p>
       </footer>
     </Router>
   );
