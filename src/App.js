@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
 import RepositoriesList from './RepositoriesList';
 import Repository from './Repository';
-//import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from './ErrorBoundary';
 import './App.css';
 
 const NotFound = () => {
